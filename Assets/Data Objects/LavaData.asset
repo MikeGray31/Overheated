@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee839bfbf91b2de4485843b988130119, type: 3}
+  m_Name: LavaData
+  m_EditorClassIdentifier: 
+  MinimumSpeed: 2.7
+  MinimumSpeedDistance: 6
+  DistanceMultiplier: 0.5
+  MinSpeedIncreaseRate: 0.04
+  StressLevelLavaIncreaseRate: 50

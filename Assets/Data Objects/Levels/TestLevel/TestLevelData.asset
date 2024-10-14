@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ff21ef6a728c54392c72e89c56fcab, type: 3}
+  m_Name: TestLevelData
+  m_EditorClassIdentifier: 
+  minimumWinHeight: 150
+  winDistanceIncreaseRate: 11
+  piecesToSpawn:
+  - {fileID: 8071801984949521151, guid: 2e592472e995577488e0eaadcb508717, type: 3}
+  - {fileID: 181983327942087759, guid: e56a95fa2268abe4487643fc9a57ebab, type: 3}
+  - {fileID: 8071801984949521151, guid: aa4e3e31056e87041b95b085ea3936e5, type: 3}
+  - {fileID: 8071801984949521151, guid: 2c32c0e47c321594882ea8053752a377, type: 3}
+  - {fileID: 8071801984949521151, guid: b1c9be0c6b36e5942beed969161aa347, type: 3}
