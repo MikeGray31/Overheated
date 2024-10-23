@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
     [SerializeField] private LevelData Data;
     [SerializeField] private LevelSectionScript highestLevelSection;
+    
 
-
-    private void Start()
+    private void Awake()
     {
+        LevelScriptPool.Instance.CreateLevelSectionPool(Data.piecesToSpawn);
+
+        for (int i = 0; i < Data.piecesToSpawn.Count; i++)
+        {
+            LevelSectionScript l = Data.piecesToSpawn[i];
+            l.indexInLevelDataList = i;
+        }
+        
         highestLevelSection = FindHighestLevelSection();
     }
 
@@ -38,12 +45,19 @@ public class LevelManager : MonoBehaviour
             return currentHighest;
         }
         return null;
-        
     }
     
     public void SpawnLevelSection()
     {
-        LevelSectionScript newSection = Instantiate(GetNewSection(), highestLevelSection.GetnextSpawnVector(), Quaternion.identity);
+        //LevelSectionScript newSection = Instantiate(GetNewSection(), highestLevelSection.GetnextSpawnVector(), Quaternion.identity);
+        
+        int index = Random.Range(0, Data.piecesToSpawn.Count);
+        //Debug.Log("LevelScriptPool exists => " + (LevelScriptPool.Instance != null));
+        LevelSectionScript newSection = LevelScriptPool.Instance.GetLevelSection(index, Data.piecesToSpawn[index]);
+        
+        newSection.gameObject.SetActive(true);
+        newSection.transform.position = highestLevelSection.GetnextSpawnVector();
+        
         highestLevelSection = newSection;
     }
 

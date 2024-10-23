@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private PlayerController player;
     private UIController ui;
     private LevelManager levelManager;
+    public LavaScript lava { get; private set; }
 
     // stressState Fields
     public bool gameIsStressed { get; private set; }
@@ -105,6 +106,8 @@ public class GameManager : MonoBehaviour
             winDistance = 100f;
             winDistanceIncreaseRate = 10f;
         }
+
+        lava = FindFirstObjectByType<LavaScript>();
     }
 
     // Update is called once per frame

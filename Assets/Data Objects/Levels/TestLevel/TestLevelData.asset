@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ff21ef6a728c54392c72e89c56fcab, type: 3}
   m_Name: TestLevelData
   m_EditorClassIdentifier: 
-  minimumWinHeight: 150
+  minimumWinHeight: 40
   winDistanceIncreaseRate: 11
   piecesToSpawn:
   - {fileID: 8071801984949521151, guid: 2e592472e995577488e0eaadcb508717, type: 3}
