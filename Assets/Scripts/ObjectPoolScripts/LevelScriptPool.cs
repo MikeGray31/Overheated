@@ -28,7 +28,7 @@ public class LevelScriptPool : MonoBehaviour
     public void CreateLevelSectionPool(List<LevelSectionScript> piecesToSpawn)
     {
         levelSections.Clear();
-        Debug.Log("Creating level section pool!");
+        //Debug.Log("Creating level section pool!");
         foreach(LevelSectionScript l in piecesToSpawn)
         {
             Queue<LevelSectionScript> queue = new Queue<LevelSectionScript>();
@@ -44,7 +44,7 @@ public class LevelScriptPool : MonoBehaviour
 
     public LevelSectionScript GetLevelSection(int index, LevelSectionScript prefab)
     {
-        if(index < 0 || index > levelSections.Count)
+        if(index < 0 || index >= levelSections.Count)
         {
             Debug.Log("index not within bounds of List!");
             return null;
