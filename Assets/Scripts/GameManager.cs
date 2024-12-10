@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         
-
         player = FindFirstObjectByType<PlayerController>();
         ui = FindFirstObjectByType<UIController>();
         OnLevelStart();

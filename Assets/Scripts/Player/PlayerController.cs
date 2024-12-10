@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
 
     public float StressLevel { get; private set; }
 
-
     //movement-related fields ------------------------------------------------
     private Vector2 movementInput;
     
@@ -280,7 +279,7 @@ public class PlayerController : MonoBehaviour
         float SpeedDiff = targetSpeed - rb.velocity.x;
         float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.accerelation : Data.deceleration;
         float movement = Mathf.Pow(Mathf.Abs(SpeedDiff) * accelRate, Data.VelPower) * Mathf.Sign(SpeedDiff);
-
+        
         rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
     }
 
@@ -302,7 +301,7 @@ public class PlayerController : MonoBehaviour
             OnJumpUpInput();
         }*/
 
-        if (movementInput.y < 0)
+        if (movementInput.y < 0) 
         {
             isFastFalling = true;
         }
